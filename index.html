@@ -1,1 +1,211 @@
-<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FToronto&showPrint=0&showCalendars=0&title=The%20Treehouse%20Public%20Events&src=NDcyNmUxNzQ4NWI5MGQ3YzI3YTYxMTRmZDI1YjNiOWQ2MmRhNDIyYTVmMzFmNjY0ZTE0NGMwN2I0MmZiZTNmNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230b8043" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Treehouse - Community Event Space</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #0a4d3c 0%, #1a6b54 100%);
+            color: #2d3436;
+            overflow-x: hidden;
+        }
+
+        .leaf {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            background: rgba(52, 211, 153, 0.3);
+            border-radius: 0 100% 0 100%;
+            animation: fall linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        .leaf:nth-child(1) { left: 10%; animation-duration: 15s; animation-delay: 0s; }
+        .leaf:nth-child(2) { left: 30%; animation-duration: 18s; animation-delay: 2s; }
+        .leaf:nth-child(3) { left: 50%; animation-duration: 20s; animation-delay: 4s; }
+        .leaf:nth-child(4) { left: 70%; animation-duration: 16s; animation-delay: 1s; }
+        .leaf:nth-child(5) { left: 85%; animation-duration: 19s; animation-delay: 3s; }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #d4f1e8;
+            font-style: italic;
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1.2s ease-out;
+            transition: transform 0.3s ease;
+        }
+
+        .content-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .intro {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #2d3436;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .intro p {
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #0a4d3c;
+            font-weight: bold;
+        }
+
+        .calendar-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background: #f8f9fa;
+            padding: 20px;
+        }
+
+        .calendar-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .calendar-title {
+            font-size: 2em;
+            color: #0a4d3c;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #2d3436;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .content-box {
+                padding: 30px 20px;
+            }
+            
+            .intro {
+                font-size: 1em;
+            }
+            
+            .calendar-container iframe {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+
+    <div class="container">
+        <header>
+            <h1>🌿 The Treehouse 🌿</h1>
+            <p class="subtitle">Come hang out</p>
+        </header>
+
+        <div class="content-box">
+            <div class="intro">
+                <p>Welcome to <span class="highlight">The Treehouse</span> – a sun-drenched sanctuary filled with plants, natural light, and the warmth of community.</p>
+                <p>Our apartment doubles as a vibrant event space where neighbors gather, ideas flourish, and connections take root. Whether you're here for a workshop, a cozy meetup, or a creative collaboration, you'll find a space that feels alive and welcoming.</p>
+            </div>
+
+            <h2 class="calendar-title">Upcoming Events</h2>
+            
+            <div class="calendar-container">
+                <!-- Replace the src URL below with your actual Google Calendar embed URL -->
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FToronto&showPrint=0&showCalendars=0&title=The%20Treehouse%20Public%20Events&src=NDcyNmUxNzQ4NWI5MGQ3YzI3YTYxMTRmZDI1YjNiOWQ2MmRhNDIyYTVmMzFmNjY0ZTE0NGMwN2I0MmZiZTNmNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230b8043" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+
+            <div class="footer-text">
+                <p><strong>How to book:</strong> Interested in hosting an event at The Treehouse? Reach out to us to check availability and learn more about our space.</p>
+                <p>Let's grow something beautiful together. 🌱</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
